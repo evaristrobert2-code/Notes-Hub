@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Notes hub CS</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+        .note { border:1px solid #ddd; border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 0.6rem; }
+        .course { color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+  <h1>Notes Hub CS</h1>
+
+   {% for note in notes %}
+   <div class="note">
+     <strong>{{ note.title }}</strong>
+       <div class="course">{{ note.course }}</div>
+   </div>
+  {% endfor %}
+
+ <p>Notes and past papers for students.</p>
+</body>
+</html>
